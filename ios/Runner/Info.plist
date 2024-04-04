@@ -4,6 +4,9 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access to the photo library is needed.</string>
+
 	<key>CFBundleDisplayName</key>
 	<string>Imagify</string>
 	<key>CFBundleExecutable</key>

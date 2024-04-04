@@ -11,6 +11,7 @@
 migrate_working_dir/
 #hide the api keys
 lib/key.dart
+lib/new.dart
 # IntelliJ related
 *.iml
 *.ipr
