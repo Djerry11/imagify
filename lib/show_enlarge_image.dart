@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -51,7 +52,13 @@ void showEnlargeImageDialog(BuildContext context, dynamic image) {
                     color: Colors.white,
                     iconSize: 30,
                     onPressed: () async {
-                      Permission permission = Permission.manageExternalStorage;
+                      Permission permission;
+
+                      if (Platform.isIOS) {
+                        permission = Permission.storage;
+                      } else {
+                        permission = Permission.manageExternalStorage;
+                      }
                       bool result = await FileDownload.requestPermission(
                         permission,
                       );

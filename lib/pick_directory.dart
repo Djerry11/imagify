@@ -55,6 +55,7 @@ class FileDownload {
   }
 
   static Future<bool> requestPermission(Permission permission) async {
+    print('Permission :${permission.status}');
     if (await permission.isGranted) {
       return true;
     } else {
